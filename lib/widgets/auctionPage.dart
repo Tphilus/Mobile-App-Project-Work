@@ -235,7 +235,7 @@ class _AuctionPageState extends State<AuctionPage> {
                       ),
                     ),
                     Text(
-                      '20h : 35min',
+                      '20h: 35min: 08s',
                       style: context.theme.textTheme.subtitle1?.copyWith(
                         color: context.colorScheme.background,
                         fontWeight: FontWeight.bold,
