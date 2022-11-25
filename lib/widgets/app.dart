@@ -32,7 +32,7 @@ class nftApp extends StatelessWidget {
         colorScheme: ColorScheme.light(
           background: Colors.white,
           onBackground: Colors.black,
-          error: Color(0xffFF4090),
+          error: Colors.red,
         ),
       ),
 
