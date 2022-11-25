@@ -1,0 +1,48 @@
+name: nft_app_project
+description: A new Flutter project.
+
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.2 <3.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+
+  # ICONS
+  flutter_tabler_icons: ^1.1.2
+
+  # FONTS
+  google_fonts: ^3.0.1
+
+  # CACHED
+  cached_network_image: ^3.2.2
+
+  # list/grid animations
+  flutter_staggered_animations: ^1.1.1
+  flutter_staggered_grid_view: ^0.6.2
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+
+  uses-material-design: true
+
+
+

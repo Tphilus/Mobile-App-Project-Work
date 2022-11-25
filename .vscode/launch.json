@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "nft_app_project",
+            "request": "launch",
+            "program": "lib/widgets/main.dart",
+            "type": "dart"
+        },
+        
+    ]
+}
