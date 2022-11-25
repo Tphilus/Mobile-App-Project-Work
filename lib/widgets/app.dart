@@ -22,7 +22,7 @@ class nftApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // Theme for the app and modifying the default light theme
       theme: ThemeData.light().copyWith(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.white,
         textTheme: GoogleFonts.dmSansTextTheme().copyWith(
           headline3: TextStyle(color: Colors.black),
           headline4:
