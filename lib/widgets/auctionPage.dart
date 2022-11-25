@@ -22,6 +22,8 @@ class _AuctionPageState extends State<AuctionPage> {
   @override
   Widget build(BuildContext context) => AnimationLimiter(
         child: Scaffold(
+          /// extend body behind bottom navigation
+          extendBody: true,
           appBar: AppBar(
             automaticallyImplyLeading: false,
 
@@ -67,7 +69,12 @@ class _AuctionPageState extends State<AuctionPage> {
             ],
           ),
           body: ListView(
-            padding: const EdgeInsets.fromLTRB(24, 40, 24, 0),
+            padding: EdgeInsets.fromLTRB(
+              24,
+              40,
+              24,
+              context.height * 0.15,
+            ),
             children: [
               Container(
                 width: context.width,
@@ -202,8 +209,43 @@ class _AuctionPageState extends State<AuctionPage> {
               ),
             ],
           ),
-
-          // let's add the last property for the bottom of the screen
+          // bottom navigation bar
+          bottomNavigationBar: SafeArea(
+            top: false,
+            child: GestureDetector(
+              onTap: () {
+                /*todo => blace bid for auction*/
+              },
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 24),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                decoration: BoxDecoration(
+                  color: context.colorScheme.onBackground,
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Place Bid',
+                      style: context.theme.textTheme.headline6?.copyWith(
+                        color: context.colorScheme.background,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      '20h : 35min',
+                      style: context.theme.textTheme.subtitle1?.copyWith(
+                        color: context.colorScheme.background,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ),
       );
 }
