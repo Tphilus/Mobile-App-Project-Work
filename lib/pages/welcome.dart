@@ -314,11 +314,11 @@ class welcomePage extends StatelessWidget {
                       Expanded(
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
                           // Animation
                           children: AnimationConfiguration.toStaggeredList(
-                            duration: Duration(milliseconds: 10),
+                            duration: Duration(milliseconds: 1100),
 
                             /// wrap each child in a slide + fade-in animation
                             childAnimationBuilder: (child) => SlideAnimation(
