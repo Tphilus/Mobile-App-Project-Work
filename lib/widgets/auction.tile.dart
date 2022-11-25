@@ -94,7 +94,7 @@ class AuctionItemTile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '20h : 35min',
+                        '20h: 35min: 08s',
                         style: context.theme.textTheme.subtitle1
                             ?.copyWith(fontWeight: FontWeight.bold),
                       ),
