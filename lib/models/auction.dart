@@ -2,10 +2,8 @@
 
 import 'dart:math';
 
-/// auction data model
+/// Auction Data Model Section
 class Auction {
-  // todo
-  // final String title;
   final String tag;
   final String imageUrl;
   final String artist;
@@ -33,10 +31,10 @@ final kSampleAuctions = <Auction>[
   Auction(
     tag: 'Day ${Random().nextInt(100)}',
     imageUrl:
-        'https://images.unsplash.com/photo-1529335764857-3f1164d1cb24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNhcnRvb258ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
-    artist: 'Jeremy Schneider',
+        'https://images.unsplash.com/photo-1605895773434-3579e181bc3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2slMjBwYW50aGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    artist: 'John Doe',
     artistAvatarUrl:
-        'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
+        'https://images.unsplash.com/photo-1605895773434-3579e181bc3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2slMjBwYW50aGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
     description: _kDummyText,
     bid: Random().nextInt(100).toDouble(),
     expiration: DateTime.now(),
@@ -44,10 +42,10 @@ final kSampleAuctions = <Auction>[
   Auction(
     tag: 'Day ${Random().nextInt(100)}',
     imageUrl:
-        'https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FydG9vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
-    artist: 'Gregg Curry',
+        'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lybHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+    artist: 'Freeman Phinehas',
     artistAvatarUrl:
-        'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
+        'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lybHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
     description: _kDummyText,
     bid: Random().nextInt(100).toDouble(),
     expiration: DateTime.now(),
@@ -55,10 +53,10 @@ final kSampleAuctions = <Auction>[
   Auction(
     tag: 'Day ${Random().nextInt(100)}',
     imageUrl:
-        'https://images.unsplash.com/photo-1624213111452-35e8d3d5cc18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGNhcnRvb24lMjBjaGFyYWN0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
-    artist: 'Angela Thornton',
+        'https://images.unsplash.com/photo-1498746607408-1e56960e3bdd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z2lybHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+    artist: 'Winner Dadzie',
     artistAvatarUrl:
-        'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFkeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
+        'https://images.unsplash.com/photo-1498746607408-1e56960e3bdd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z2lybHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
     description: _kDummyText,
     bid: Random().nextInt(100).toDouble(),
     expiration: DateTime.now(),
@@ -66,10 +64,10 @@ final kSampleAuctions = <Auction>[
   Auction(
     tag: 'Day ${Random().nextInt(100)}',
     imageUrl:
-        'https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcnRvb258ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
-    artist: 'John Salazar',
+        'https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGdpcmxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    artist: 'Alexandra Inout',
     artistAvatarUrl:
-        'https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+        'https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGdpcmxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
     description: _kDummyText,
     bid: Random().nextInt(100).toDouble(),
     expiration: DateTime.now(),

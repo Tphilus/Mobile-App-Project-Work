@@ -12,15 +12,10 @@ class nftApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // this will show the System UI (date and time)
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
 
-    // ignore: prefer_const_constructors
-    // return material app with a welcome screen
     return MaterialApp(
-      // Remove banner
       debugShowCheckedModeBanner: false,
-      // Theme for the app and modifying the default light theme
       theme: ThemeData.light().copyWith(
         backgroundColor: Colors.white,
         textTheme: GoogleFonts.dmSansTextTheme().copyWith(
@@ -35,7 +30,6 @@ class nftApp extends StatelessWidget {
           error: Color(0xffFF4090),
         ),
       ),
-
       home: welcomePage(),
     );
   }

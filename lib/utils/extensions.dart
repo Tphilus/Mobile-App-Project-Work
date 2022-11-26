@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
-// extensions for our build-in classes
-// this adds additional functionality to the classes
 extension BuildContextExtension on BuildContext {
-// instance of current theme, using the this keyword since we are
-// in the [BuildContext] scope
   ThemeData get theme => Theme.of(this);
 
   // color scheme of current theme

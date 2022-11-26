@@ -7,15 +7,11 @@ import 'package:nft_app_project/models/auction.dart';
 import 'package:nft_app_project/utils/extensions.dart';
 import 'package:nft_app_project/widgets/auctionPage.dart';
 
-// [Auction] tile: as shown on the home page
 class AuctionItemTile extends StatelessWidget {
   final Auction auction;
   const AuctionItemTile({super.key, required this.auction});
 
   @override
-
-  /// Gesture detector to navigate through to the action description or
-  /// navigate to the details page when tapped
   Widget build(BuildContext context) => GestureDetector(
         onTap: () => Navigator.of(context).push(
           MaterialPageRoute(
@@ -23,24 +19,20 @@ class AuctionItemTile extends StatelessWidget {
           ),
         ),
         child: Container(
-          /// fill 80% of the display width
           width: context.width * 0.8,
           decoration: BoxDecoration(
             border: Border.all(color: context.theme.disabledColor),
           ),
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-
           child: Column(
             children: [
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  /// tag & icon
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
                     children: [
                       Icon(TablerIcons.brand_sentry),
                       SizedBox(width: 12),
@@ -52,8 +44,6 @@ class AuctionItemTile extends StatelessWidget {
                       ),
                     ],
                   ),
-
-                  /// Artist information
                   Text(
                     '@${auction.artist}',
                     style: context.theme.textTheme.subtitle1?.copyWith(
@@ -64,16 +54,12 @@ class AuctionItemTile extends StatelessWidget {
               ),
               SizedBox(height: 16),
 
-              // NFT Image
               Expanded(
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: context.theme.disabledColor.withOpacity(0.1),
                   ),
-
-                  // add shared element transition.
-                  // image transitions to next page
                   child: Hero(
                     tag: auction.imageUrl,
                     child: CachedNetworkImage(
@@ -88,7 +74,6 @@ class AuctionItemTile extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  /// Remaining time stats
                   Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -107,17 +92,11 @@ class AuctionItemTile extends StatelessWidget {
                       ),
                     ],
                   ),
-
-                  /// Highest bid stats
                   Column(
                     mainAxisSize: MainAxisSize.min,
-
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    // ignore: prefer_const_literals_to_create_immutables
                     children: [
                       Text(
-                        /// multiply by some random value and set
-                        /// to 2 decimal places
                         '${(auction.bid * 1.58).toStringAsFixed(2)}H ETH',
                         style: context.theme.textTheme.subtitle1
                             ?.copyWith(fontWeight: FontWeight.bold),

@@ -12,7 +12,7 @@ class UserAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(right: 16),
-      // force image to be bound by the decoration of the (Container]
+      // Force Image To Fit The Decoration of The (Container]
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
@@ -21,15 +21,9 @@ class UserAvatar extends StatelessWidget {
       height: size,
       width: size,
 
-      /// however, this image provider does not cache the image
-      /// and downloads it every time the user visits the page
-      /// which is not ideal. So let's use a package called
-      /// 'cached_network_image. By the way I have added all of the needed
-      ///dependencies
-
       child: CachedNetworkImage(
         imageUrl: avatar,
-        // crop in on the image
+        // Crop Image
         fit: BoxFit.cover,
       ),
     );

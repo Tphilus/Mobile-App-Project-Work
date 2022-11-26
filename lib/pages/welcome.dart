@@ -1,10 +1,7 @@
-// ignore_for_file: unused_import, camel_case_types, prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_element, dead_code, non_constant_identifier_names, avoid_web_libraries_in_flutter
-
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:nft_app_project/pages/home.dart';
-import 'package:nft_app_project/utils/constants.dart';
 import 'package:nft_app_project/utils/extensions.dart';
 
 class welcomePage extends StatelessWidget {
@@ -19,7 +16,6 @@ class welcomePage extends StatelessWidget {
         extendBodyBehindAppBar: false,
         appBar: AppBar(
           centerTitle: false,
-          // add leading icon to the left hand
           title: Icon(
             TablerIcons.brand_sentry,
             color: context.colorScheme.onBackground,
@@ -27,8 +23,6 @@ class welcomePage extends StatelessWidget {
           ),
           elevation: 0,
           backgroundColor: context.colorScheme.background,
-
-          // add action to the right hand side
           actions: [
             Container(
               margin: const EdgeInsets.only(right: 16),
@@ -48,33 +42,23 @@ class welcomePage extends StatelessWidget {
 
         body: SafeArea(
           child: Column(
-            // align to the start horizontally
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Top section where we will place our (logo and wallet)
-
-              // SixedBox (10% of page's height)
               SizedBox(
                 height: context.height * 0.05,
               ),
 
-              // Row with an Icon and then a text
               Padding(
                 padding: EdgeInsets.only(left: 24),
                 child: Row(
-                  // take up the smallest available space
                   mainAxisSize: MainAxisSize.min,
-
-                  // align vertically centered
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Icon
                     Icon(TablerIcons.bolt,
                         size: context.theme.textTheme.subtitle2?.fontSize),
-                    // Siizedbox
-                    SizedBox(width: 8),
-
-                    // Text
+                    SizedBox(
+                      width: 8,
+                    ),
                     Text(
                       'Started',
                       style: context.theme.textTheme.subtitle1,
@@ -83,23 +67,19 @@ class welcomePage extends StatelessWidget {
                 ),
               ),
 
-              // SixedBox
               SizedBox(
                 height: 32,
               ),
 
-              // Title
-              // using [Text#rich] to enhance the styling and the positioning of the header
               Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: AnimationConfiguration.toStaggeredList(
-                    /// length of animation
                     duration: Duration(milliseconds: 550),
 
-                    /// wrap each child in a slide + fade-in animation
+                    ///  Animation
                     childAnimationBuilder: (child) => SlideAnimation(
-                      /// we will offset to 50.0 so that it animates from right to left
+                      ///  Animates from right to left
                       horizontalOffset: 50.0,
 
                       child: FadeInAnimation(child: child),
@@ -121,7 +101,6 @@ class welcomePage extends StatelessWidget {
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ],
-                            // this will add extra styling to the already existing styling
                             style: context.theme.textTheme.headline3,
                           ),
                         ),
@@ -132,7 +111,7 @@ class welcomePage extends StatelessWidget {
                         height: 24,
                       ),
 
-                      // Subtitle
+                      // Subtitle Sction
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 24),
                         child: Text.rich(
@@ -160,16 +139,16 @@ class welcomePage extends StatelessWidget {
                 height: context.height * 0.05,
               ),
 
-              // bottom section.
+              // Bottom section.
               Row(
                 children: [
                   Column(
                     children: AnimationConfiguration.toStaggeredList(
                       duration: Duration(milliseconds: 950),
 
-                      /// wrap each child in a slide + fade-in animation
+                      /// Animation Sections
                       childAnimationBuilder: (child) => SlideAnimation(
-                        /// we will offset to -50.0 so that it animates from left to right
+                        ///  Animates from left to right
                         horizontalOffset: -50.0,
 
                         child: FadeInAnimation(child: child),
@@ -196,7 +175,6 @@ class welcomePage extends StatelessWidget {
                           height: 50,
                         ),
 
-                        // Artist
                         Padding(
                           padding: EdgeInsets.only(
                             left: 50,
@@ -214,7 +192,6 @@ class welcomePage extends StatelessWidget {
                           height: 50,
                         ),
 
-                        // Aution
                         Padding(
                           padding: EdgeInsets.only(
                             left: 50,
@@ -231,9 +208,6 @@ class welcomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-
-                  // Right hand side(discover artwork button with color)
-                  // Full container containing the icon and the text
                   Padding(
                     padding: EdgeInsets.only(left: 38),
                     child: Container(
@@ -247,8 +221,6 @@ class welcomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // container for the Icon
-                          // GestureDetector will navigate to the home Page
                           GestureDetector(
                             onTap: () {
                               Navigator.push(
@@ -257,8 +229,6 @@ class welcomePage extends StatelessWidget {
                                     builder: (context) => const HomePage()),
                               );
                             },
-                            // Within the `FirstRoute widget
-
                             child: Container(
                               decoration: BoxDecoration(
                                 color: Color(0xFF8E95FE),
@@ -273,12 +243,14 @@ class welcomePage extends StatelessWidget {
                             ),
                           ),
 
-                          // SIZEDBOX
-                          SizedBox(height: 28),
+                          // SizeBox
+                          SizedBox(
+                            height: 28,
+                          ),
 
                           // text
                           Text(
-                            'Discover\nArtwork',
+                            "Discover Artwork",
                             style: context.theme.textTheme.headline4?.copyWith(
                                 color: context.colorScheme.onBackground,
                                 fontWeight: FontWeight.w500),
@@ -296,7 +268,7 @@ class welcomePage extends StatelessWidget {
                 ],
               ),
 
-              // FOOTER
+              // Footer Section
               Padding(
                 padding: EdgeInsets.fromLTRB(40, 40, 24, 16),
                 child: SafeArea(
@@ -316,13 +288,13 @@ class welcomePage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
-                          // Animation
+                          // Animations
                           children: AnimationConfiguration.toStaggeredList(
                             duration: Duration(milliseconds: 1100),
 
-                            /// wrap each child in a slide + fade-in animation
+                            ///  Animation
                             childAnimationBuilder: (child) => SlideAnimation(
-                              /// we will offset to 50.0 so that it animates from bottom to top
+                              ///  Animates from bottom to top
                               verticalOffset: 50.0,
 
                               child: FadeInAnimation(child: child),
