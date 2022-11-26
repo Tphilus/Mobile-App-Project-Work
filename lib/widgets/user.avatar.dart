@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:nft_app_project/utils/extensions.dart';
+import 'package:home_work/utils/extensions.dart';
 
 // user profile image widget
 class UserAvatar extends StatelessWidget {

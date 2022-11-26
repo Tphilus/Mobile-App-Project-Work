@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nft_app_project">
+    package="com.example.home_work">
    <application
-        android:label="nft_app_project"
+        android:label="home_work"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

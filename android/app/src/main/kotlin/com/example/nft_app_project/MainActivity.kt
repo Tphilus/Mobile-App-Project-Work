@@ -1,4 +1,4 @@
-package com.example.nft_app_project
+package com.example.home_work
 
 import io.flutter.embedding.android.FlutterActivity
 

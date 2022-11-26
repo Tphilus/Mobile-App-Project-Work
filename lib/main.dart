@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nft_app_project/widgets/app.dart';
+import 'package:home_work/widgets/app.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:nft_app_project/pages/welcome.dart';
-import 'package:nft_app_project/utils/extensions.dart';
+import 'package:home_work/pages/welcome.dart';
+import 'package:home_work/utils/extensions.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class nftApp extends StatelessWidget {

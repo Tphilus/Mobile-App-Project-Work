@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
-import 'package:nft_app_project/pages/home.dart';
-import 'package:nft_app_project/utils/extensions.dart';
+import 'package:home_work/pages/home.dart';
+import 'package:home_work/utils/extensions.dart';
 
 class welcomePage extends StatelessWidget {
   const welcomePage({super.key});
